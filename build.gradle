@@ -18,6 +18,7 @@ plugins {
 repositories {
     jcenter()
     mavenCentral()
+    maven { url "https://dl.bintray.com/insanusmokrassar/PlaguBot/" }
 }
 
 dependencies {
@@ -25,7 +26,7 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version"
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlin_serialisation_runtime_version"
 
-    implementation "dev.inmo:tgbotapi:$tgbotapi_version"
+    implementation "dev.inmo:plagubot.plugin:$plagubot_version"
 }
 
 application {
