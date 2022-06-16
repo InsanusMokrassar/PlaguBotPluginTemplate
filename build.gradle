@@ -1,33 +1,29 @@
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
+        classpath libs.kotlin.gradle.plugin
+        classpath libs.kotlin.serialization.plugin
     }
 }
 
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version "$kotlin_version"
-    id "org.jetbrains.kotlin.plugin.serialization" version "$kotlin_version"
-    id 'application'
+    alias libs.plugins.kotlin.jvm
+    alias libs.plugins.kotlin.serialization
 }
 
+project.group = project_group
+project.version = project_version
+
 repositories {
-    jcenter()
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version"
-    api "org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlin_serialisation_runtime_version"
-
-    api "dev.inmo:plagubot.plugin:$plagubot_version"
-}
-
-application {
-    mainClassName = 'telegram_bot.AppKt'
+    implementation libs.kotlin
+    api libs.plagubot.plugin
+    api libs.kslog
 }
