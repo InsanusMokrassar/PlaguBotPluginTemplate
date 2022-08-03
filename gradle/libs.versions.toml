@@ -1,8 +1,8 @@
 [versions]
 
 kotlin = "1.6.21"
-plagubot = "1.4.0"
-kslog = "0.4.0"
+plagubot = "1.4.1"
+kslog = "0.4.2"
 
 [libraries]
 
