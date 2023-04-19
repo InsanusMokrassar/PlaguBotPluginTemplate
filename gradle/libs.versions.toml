@@ -1,8 +1,8 @@
 [versions]
 
-kotlin = "1.8.10"
-plagubot = "5.0.1"
-kslog = "1.0.0"
+kotlin = "1.8.20"
+plagubot = "5.0.2"
+kslog = "1.1.1"
 
 [libraries]
 
