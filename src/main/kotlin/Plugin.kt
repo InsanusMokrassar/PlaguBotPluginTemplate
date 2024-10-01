@@ -25,7 +25,7 @@ class PlaguBotPlugin : Plugin {
     data class Config(
         val someParam: String = "Default value"
     )
-    override fun Module.setupDI(database: Database, params: JsonObject) {
+    override fun Module.setupDI(params: JsonObject) {
         // Here you may declare any dependencies you need
         single {
             // Take from config value by field "plugin". Replace to your plugin name and fill Config with your plugin configuration
